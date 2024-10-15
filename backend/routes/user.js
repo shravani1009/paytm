@@ -6,10 +6,10 @@ const jwt = require ( "jsonwebtoken")
 const router = express.Router();
 
 const signupSchema = zod.object({
-    username : zod.string(),
+    username : zod.string().email(),
     password : zod.string(),
     firstName : zod.string(),
-    password: zod.string()
+    lastName : zod.string()
     
 })
 
